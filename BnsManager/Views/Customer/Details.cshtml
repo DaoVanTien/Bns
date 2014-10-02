@@ -1,0 +1,117 @@
+﻿@model EFEntity.tblCustomers
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+                <div class="col-lg-12 col-md-12 bns_form_head">
+                    <p class="strong"> <strong> Customer / New </strong></p>
+                    <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                    @Html.ActionLink("Discard", "Index", "Customer", new {@class="btn btn-warning btn-sm" })
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+			
+			<div class="container-fluid">
+                <div class="form-create">
+                    <div class="form-header">
+                        <div class="form-title">
+                            <p>  Name (<input type="checkbox"> Is a Company? ) </p>
+                            <div class="form-group">
+                                <strong> Name: </strong>
+                                @Model.Name
+                            </div>
+                            <div class="form-group">
+                                <strong> CustomerID: </strong>
+                                @Model.CustomerID
+                            </div>
+                        </div>
+                        <div class="form-option">
+                            <ul> 
+                                
+                                <li> <button type="button" class="btn btn-default btn-sm"> Opportunities </button> </li>
+                                <li> <button type="button" class="btn btn-default btn-sm"> Opportunities </button> </li>
+                                <li> <button type="button" class="btn btn-default btn-sm"> Opportunities </button> </li>
+                                <li> @Html.ActionLink("Request", "Create", "Request", null , new {@class="btn btn-warning btn-sm" }) </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-content">
+                            <table class="table">
+                            <tbody>
+                                <tr>     
+                                    <td> <strong> Address </strong>   </td>
+                                    <td> @Model.Address1 </td>
+                                    <td> <strong> Phone </strong>  </td>
+                                    <td>  @Model.Phone1</td>
+                                </tr>
+
+                                <tr>     
+                                    <td> <strong> City </strong>   </td>
+                                    <td> @Model.Address2</td>
+                                    <td> <strong> Mobile </strong>  </td>
+                                    <td>  @Model.Phone2  </td>
+                                </tr>
+
+                                <tr>     
+                                    <td>  <strong> Web site </strong>  </td>
+                                    <td> @Model.Website </td>
+                                    <td> <strong> Email </strong>  </td>
+                                    <td> @Model.Email </td>
+                                </tr>
+                                
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                    <div class="form-footer">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                         
+                          <li><a href="#internalNote" role="tab" data-toggle="tab">Internal Notes</a></li>
+                          <li><a href="#salePurchase" role="tab" data-toggle="tab"> Order </a></li>
+                          <li><a href="#accounting" role="tab" data-toggle="tab"> Offer </a></li>
+                          <li><a href="#pointSale" role="tab" data-toggle="tab"> Request </a></li>
+                          
+
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane" id="internalNote"> 
+                            @Model.Notes
+                          </div>
+                          <div class="tab-pane" id="salePurchase"> 
+                              @Html.Action("OrderByCustomer","Order")
+
+                          </div>
+                          <div class="tab-pane" id="accounting">  
+                              @Html.Action("OfferByCustomer", "Offer")
+                             
+                          </div>
+                          <div class="tab-pane" id="pointSale">  
+
+                              @Html.Action("RequestByCustomer","Request")
+                          </div
+
+                         
+                            
+                        </div>
+
+
+                    </div>
+
+                </div>
+                
+               
+            </div>
+            <!-- /.container-fluid -->
+            <!-- /.row -->
+			

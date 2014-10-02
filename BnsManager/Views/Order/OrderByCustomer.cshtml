@@ -1,0 +1,13 @@
+﻿@model IEnumerable<EFEntity.tblOrderMap>
+<table>
+       <tbody>
+           @foreach(var item in Model)
+           {
+          
+                <tr>
+                    <td> @item.OrderName </td>
+                    <td> @Html.ActionLink("Detail", "Details", new {@id = item.ID})</td>
+                </tr> 
+           }
+       </tbody>
+   </table>

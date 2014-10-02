@@ -1,0 +1,57 @@
+﻿@model EFEntity.tblRequestMap
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage_Sales.cshtml";
+}
+<div class="row">
+                <div class="col-lg-12 col-md-12 bns_form_head">
+                    <p class="strong"> <strong> Order / New </strong></p>
+                    <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                    @Html.ActionLink("Discard", "Index", "Customer", null, new {@class="btn btn-warning btn-sm" })
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+			
+			<div class="container-fluid">
+               <div class="form-create">
+
+                   <div class="form-option">
+                            <ul> 
+                                
+                                <li> <button type="button" class="btn btn-default btn-sm"> Opportunities </button> </li>
+                                <li> <button type="button" class="btn btn-default btn-sm"> Opportunities </button> </li>
+                                <li> @Html.ActionLink("Order", "Create", "Order", null , new {@class="btn btn-warning btn-sm" }) </li>
+                                <li> @Html.ActionLink("Offer", "Create", "Offer", null , new {@class="btn btn-warning btn-sm" }) </li>
+
+                            </ul>
+                        </div>
+                   
+                   <table class="table">
+                       <tbody>
+                           <tr>
+                               <td> <strong> Request Name </strong> </td>
+                               <td> 
+                                   
+                                    @Model.RequestName
+                               </td>
+                               <td> <strong> Date </strong> </td>
+                               <td> @Model.RequestID </td>
+                           </tr>
+                           <tr>
+                               <td> <strong> Request ID </strong> </td>
+                               <td>
+                                   @Model.RequestID
+                               </td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td> <strong> Product </strong> </td>
+                               <td> @Model.ProductName </td>
+                               <td> </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                      
+                   </div>
+               </div>
+               

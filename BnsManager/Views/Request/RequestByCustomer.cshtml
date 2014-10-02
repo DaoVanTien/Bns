@@ -1,0 +1,12 @@
+﻿@model EFEntity.tblRequestMap
+   <table>
+       <tbody>
+
+          
+                <tr>
+                    <td> @Model.ProductName </td>
+                    <td> @Html.ActionLink("Detail", "Details", new {@id = Model.ID})</td>
+                </tr> 
+           
+       </tbody>
+   </table>

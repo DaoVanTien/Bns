@@ -1,0 +1,105 @@
+﻿@model EFEntity.tblProducts
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage_Sales.cshtml";
+}
+@using (Html.BeginForm())
+{ 
+    @Html.ValidationSummary(true)
+     <div class="row">
+                <div class="col-lg-12 col-md-12 bns_form_head">
+                    <p class="strong"> <strong> Product / New </strong></p>
+                    <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                    @Html.ActionLink("Discard", "Index", "Product", new {@class="btn btn-warning btn-sm" })
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+			
+			<div class="container-fluid">
+                <div class="form-create">
+                    <div class="form-header clearfix">
+                        <div class="form-title">
+                        
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.ProductName, new { @class="form-control", @placeholder="Product Name" })
+                                
+                            </div>
+                             <div class="form-group">
+                               
+                                @Html.TextBoxFor(model => model.ProductID, new { @class="form-control", @placeholder="Product ID" })
+                            </div>
+                          
+                            <div class="form-group">
+
+                                @Html.DropDownList("CategoryID", (SelectList)ViewBag.Cate, new {@class="form-control" })
+                            </div>
+
+
+                        </div>
+                        <div class="form-option">
+                            <ul> 
+                                <li> <button type="button" class="btn btn-default btn-sm" > Orderpoints </button> </li>
+                                <li> <button type="button" class="btn btn-default btn-sm" > Sales </button> </li>
+                                <li> <button type="button" class="btn btn-default btn-sm" > Bill of Materials </button> </li>
+                               
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="form-footer clearfix">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                         
+                          <li><a href="#internalNote" role="tab" data-toggle="tab">Infor1</a></li>
+                          <li><a href="#salePurchase" role="tab" data-toggle="tab"> Sales & Purchase</a></li>
+                          <li><a href="#accounting" role="tab" data-toggle="tab"> Accounting </a></li>
+                          <li><a href="#pointSale" role="tab" data-toggle="tab"> Point of Sale </a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane" id="internalNote">
+                                <div class="form-content">
+                            <table class="table">
+                            <tbody>
+                                <tr>     
+                                    <td>  Sku  </td>
+                                    <td> @Html.TextBoxFor(model => model.SKU, new { @class="form-control", @placeholder="sku" }) </td>
+                                    <td> UPC </td>
+                                    <td> @Html.TextBoxFor(model => model.UPC, new { @class="form-control", @placeholder="upc" })</td>
+                                </tr>
+
+                                <tr>     
+                                    <td>  ean  </td>
+                                    <td> @Html.TextBoxFor(model => model.EAN, new { @class="form-control", @placeholder="ean" }) </td>
+                                    <td> jan </td>
+                                    <td> @Html.TextBoxFor(model => model.JAN, new { @class="form-control", @placeholder="jan" })</td>
+                                </tr>
+
+                                <tr>     
+                                    <td>  isbm </td>
+                                    <td> @Html.TextBoxFor(model => model.ISBN, new { @class="form-control", @placeholder="isbm" }) </td>
+                                    <td> mpn </td>
+                                    <td> @Html.TextBoxFor(model => model.MPN, new { @class="form-control", @placeholder="mpn" }) </td>
+                                </tr>
+                                
+                                
+                            </tbody>
+                        </table>
+
+                                </div>
+                          </div>
+                          <div class="tab-pane" id="salePurchase">
+                                <input type="text" class="form-control" placeholder="width "/>
+                          </div>
+                          <div class="tab-pane" id="accounting">  accounting </div>
+                          <div class="tab-pane" id="pointSale">  pointSale </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+               
+            </div>
+}
+           
