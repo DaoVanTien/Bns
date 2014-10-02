@@ -1,0 +1,5 @@
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\BnsManager\bin\EFBusiness.dll
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\BnsManager\bin\EFBusiness.pdb
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFBusiness\obj\Debug\EFBusiness.dll
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFBusiness\obj\Debug\EFBusiness.pdb
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFBusiness\obj\Debug\EFBusiness.csprojResolveAssemblyReference.cache

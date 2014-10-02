@@ -1,0 +1,7 @@
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFEntity\bin\Debug\EFEntity.dll
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFEntity\bin\Debug\EFEntity.pdb
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFEntity\obj\Debug\EFEntity.dll
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFEntity\obj\Debug\EFEntity.pdb
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\BnsManager\bin\EFEntity.dll
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\BnsManager\bin\EFEntity.pdb
+D:\BNS\BNS-manager\www\BNSManager\BnsManager\EFEntity\obj\Debug\EFEntity.csprojResolveAssemblyReference.cache
