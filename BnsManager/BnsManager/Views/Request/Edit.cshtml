@@ -1,0 +1,117 @@
+﻿@model EFEntity.tblRequests
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage_Sales.cshtml";
+}
+
+<div class="height">
+
+</div>
+<!-- BEGIN SAMPLE FORMPORTLET-->
+<div class="widget purple">
+    <div class="widget-title">
+        <h4>
+            <i class="icon-reorder"></i> Create New Request
+        </h4>
+        <span class="tools">
+            <a href="javascript:;" class="icon-chevron-down"></a>              
+        </span>
+    </div>
+    <div class="widget-body">
+        <!-- BEGIN FORM-->            
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <div class="form-create">
+                    <div class="form-header">
+                        <div class="form-title span6" >
+                            
+                            
+                        </div>
+                        <div class="form-option span6" >
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="form-content">
+                            <table class="table">
+                               <tbody>
+                                   <tr>
+                                       <td> <strong> Request Name </strong> </td>
+                                       <td> 
+                                   
+                                            @Html.TextBoxFor(Model => Model.RequestName) 
+                                       </td>
+                                       <td> <strong> Date </strong> </td>
+                                       <td> @Html.TextBoxFor(Model => Model.Date_Add,  new { @class = "m-ctrl-medium", id="dp1" })  
+                                          
+                                      
+                               
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Request ID </strong> </td>
+                                       <td>
+                                           @Html.TextBoxFor(Model => Model.RequestID)
+                                       </td>
+                                       <td></td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Product </strong> </td>
+                                       <td> @Html.DropDownList("ProductID", (SelectList)ViewBag.Product, new { @class = "form-control" }) </td>
+                                       <td> </td>
+                                   </tr>
+                               </tbody>
+                            </table>
+                    </div>
+
+
+                   
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a type="button" class="btn" href="@Url.Action("Index", "Home")">Cancel</a>
+                    </div>
+
+                </div>
+            }
+        <!-- END FORM-->
+    </div>
+</div>
+
+    
+   <script type="text/javascript" src="~/Content/assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
+   
+   <script type="text/javascript" src="~/Content/assets/clockface/js/clockface.js"></script>
+   <script type="text/javascript" src="~/Content/assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+   <script type="text/javascript" src="~/Content/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="~/Content/assets/bootstrap-daterangepicker/date.js"></script>
+   <script type="text/javascript" src="~/Content/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+   <script type="text/javascript" src="~/Content/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+   <script type="text/javascript" src="~/Content/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+   
+    
+    <script  type="text/javascript" src="~/Scripts/js/form-component.js"></script>
+    <script language="javascript" type="text/javascript">
+
+       $(function() {
+
+           $.configureBoxes();
+
+       });
+
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+

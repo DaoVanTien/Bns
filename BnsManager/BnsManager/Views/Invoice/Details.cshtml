@@ -1,0 +1,78 @@
+﻿@model EFEntity.tblInvoiceMap
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage_Sales.cshtml";
+}
+<div class="height">
+
+</div>
+<!-- BEGIN SAMPLE FORMPORTLET-->
+<div class="widget purple">
+    <div class="widget-title">
+        <h4>
+            <i class="icon-reorder"></i>  Invoice Details
+        </h4>
+        <span class="tools">
+            <a href="javascript:;" class="icon-chevron-down"></a>              
+        </span>
+    </div>
+    <div class="widget-body">
+        <!-- BEGIN FORM-->            
+           
+                <div class="form-create">
+                    <div class="form-header">
+                        <div class="form-title span6" >
+                            
+                            
+                        </div>
+                        <div class="form-option span6" >
+                             <!-- Button to trigger modal -->
+                            
+                           
+            
+                            <!-- Modal -->
+                        </div>
+                    </div>
+
+
+                    <div class="form-content">
+                            <table class="table">
+                               <tbody>
+                                   <tr>
+                                       <td> <strong> Invoice Name </strong> </td>
+                                       <td> 
+                                   
+                                            @Model.InvoiceName
+                                       </td>
+                                       <td> <strong> Date </strong> </td>
+                                       <td> 
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Invoice Code </strong> </td>
+                                       <td>
+                                           @Model.InvoiceID
+                                       </td>
+                                       <td></td>
+                                       <td></td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Description </strong> </td>
+                                       <td> @Model.Description </td>
+                                       <td> </td>
+                                       <td> </td>
+
+                                   </tr>
+                               </tbody>
+                            </table>
+                    </div>
+
+
+                   
+
+                    
+
+                </div>
+           
+    </div>
+</div>

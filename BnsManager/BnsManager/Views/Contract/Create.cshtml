@@ -1,0 +1,92 @@
+﻿@model EFEntity.tblContracts
+@{
+    ViewBag.Title = "Create New Contract";
+    Layout = "~/Views/Shared/_LayoutPage_Sales.cshtml";
+}
+<div class="height">
+
+</div>
+<!-- BEGIN SAMPLE FORMPORTLET-->
+<div class="widget purple">
+    <div class="widget-title">
+        <h4>
+            <i class="icon-reorder"></i> Create New Contract
+        </h4>
+        <span class="tools">
+            <a href="javascript:;" class="icon-chevron-down"></a>              
+        </span>
+    </div>
+    <div class="widget-body">
+        <!-- BEGIN FORM-->            
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <div class="form-create">
+                    <div class="form-header">
+                        <div class="form-title span6" >
+                            
+                            
+                        </div>
+                        <div class="form-option span6" >
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="form-content">
+                            <table class="table">
+                               <tbody>
+                                   <tr>
+                                       <td> <strong> Contract Name </strong> </td>
+                                       <td> 
+                                   
+                                            @Html.TextBoxFor(Model => Model.ContractName) 
+                                       </td>
+                                       <td> <strong> Date </strong> </td>
+                                       <td> 
+                                          
+                                      
+                               
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Contract Code </strong> </td>
+                                       <td>
+                                           @Html.TextBoxFor(Model => Model.ContractID)
+                                       </td>
+                                       <td></td>
+                                   </tr>
+                                   
+                               </tbody>
+                            </table>
+                    </div>
+
+
+                   
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a type="button" class="btn" href="@Url.Action("Index", "Home")">Cancel</a>
+                    </div>
+
+                </div>
+            }
+        <!-- END FORM-->
+    </div>
+</div>
+
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+

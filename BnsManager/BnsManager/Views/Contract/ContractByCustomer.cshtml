@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EFEntity.tblContractMap>
+<!-- BEGIN EXAMPLE TABLE widget-->
+                <div class="widget red">
+                    <div class="widget-title">
+                        <h4><i class="icon-reorder"></i> All Contract  </h4>
+                            <span class="tools">
+                                
+                                
+                            </span>
+                    </div>
+                    <div class="widget-body">
+                        <table class="table table-striped table-bordered" id="sample_1">
+                            <thead>
+                            <tr>
+                                
+                                <th class="hidden-phone">Contract Name</th>
+                                <th class="hidden-phone">Contract Code</th>
+                                <th class="hidden-phone"> Product </th>
+                                <th class="hidden-phone"> Employee </th>
+                                <th></th>
+                               
+                            </tr>
+                            </thead>
+                            <tbody>
+                                 @foreach(var item in Model)
+                                   {
+          
+                                        <tr>
+                                            <td> @item.ContractName </td>
+                                            <td> @item.ContractID </td>
+                                            <td> @item.ProductName </td>
+                                            <td> @item.EmployeeName </td>
+                                            <td> @Html.ActionLink("Detail", "Details", new {@id = item.ID})</td>
+                                        </tr> 
+                                   }
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- END EXAMPLE TABLE widget-->

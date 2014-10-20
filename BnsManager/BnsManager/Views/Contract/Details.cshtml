@@ -1,0 +1,101 @@
+﻿@model EFEntity.tblContractMap
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage_Sales.cshtml";
+}
+<div class="height">
+
+</div>
+<!-- BEGIN SAMPLE FORMPORTLET-->
+<div class="widget purple">
+    <div class="widget-title">
+        <h4>
+            <i class="icon-reorder"></i>  Contract Details
+        </h4>
+        <span class="tools">
+            <a href="javascript:;" class="icon-chevron-down"></a>              
+        </span>
+    </div>
+    <div class="widget-body">
+        <!-- BEGIN FORM-->            
+           
+                <div class="form-create">
+                    <div class="form-header">
+                        <div class="form-title span6" >
+                            
+                            
+                        </div>
+                        <div class="form-option span6" >
+                             <!-- Button to trigger modal -->
+                            
+                            @Html.ActionLink("Create Booking", "Create", "Booking" , null,  new {@class="btn  btn-success" } )
+                            @Html.ActionLink("Create Invoice", "Create", "Invoice" , null,  new {@class="btn  btn-success" } )
+            
+                            <!-- Modal -->
+                        </div>
+                    </div>
+
+
+                    <div class="form-content">
+                            <table class="table">
+                               <tbody>
+                                   <tr>
+                                       <td> <strong> Contract Name </strong> </td>
+                                       <td> 
+                                   
+                                            @Model.ContractName
+                                       </td>
+                                       <td> <strong> Employee </strong> </td>
+                                       <td> @Model.EmployeeName
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Contract Code </strong> </td>
+                                       <td>
+                                           @Model.ContractID
+                                       </td>
+                                       <td></td>
+                                       <td></td>
+                                   </tr>
+                                   <tr>
+                                       <td> <strong> Product </strong> </td>
+                                       <td> @Model.ProductName </td>
+                                       <td> </td>
+                                       <td> </td>
+
+                                   </tr>
+                               </tbody>
+                            </table>
+                    </div>
+
+                    <div class="form-footer">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                         
+                            <li><a href="#booking" role="tab" data-toggle="tab">Booking</a></li>
+                            <li><a href="#invoice" role="tab" data-toggle="tab"> Invoice </a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane" id="booking"> 
+                                @Html.Action("BookingByContract", "Booking")
+                            </div>
+                            <div class="tab-pane" id="invoice"> 
+                                @Html.Action("InvoiceByContract", "Invoice")
+                            </div>
+                        </div>
+                     </div>
+
+
+                   
+
+                    
+
+                </div>
+           
+    </div>
+</div>
+
